@@ -1,0 +1,44 @@
+
+<div class="Grosery" ng-if="Grosery.name">
+    <div class="rest-wrapper">
+        <div class="image">
+            <img src="{{Grosery.image}}" height="100" width="100">
+        </div>
+        <div class="rest-info">
+            <div class="rest-category">
+               <small>{{Grosery.category}} </small>
+            </div>
+            <div class="rest-name">
+          <a ng-href="#!/Grosery/{{Grosery}.id}}"><strong>{{Grosery.name}}</strong></a>
+            </div>
+            <div>
+               <strong> {{Grosery.location}}</strong>
+            </div>
+            <div class="rest-address">
+                {{Grosery.address}}
+            </div>
+        </div>
+    </div>
+    <div class="rest-extra">
+        <div class="type">
+            <div><small>Cuisines:</small></div>
+            <div><small>Cost for Two: </small></div>
+            <div><small>Hours:</small></div>
+        </div>
+        <div class="value">
+            <div>{{Grosery.cuisines}}</div>
+            <div>{{Grosery.cost | number}}</div>
+            <div>{{Grosery.hours}}</div>
+        </div>
+    </div>
+    <div class="rating">
+        <strong>{{Grosery.vote}}</strong>
+    </div>
+</div>
+<div ng-if="ingredients">
+    <ol>
+    <li ng-repeat="ingredient in ingredients">
+    {{ingredient}}
+    </li>
+    </ol>
+</div>
